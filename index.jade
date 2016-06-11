@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title GoogleWatch
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(rel="stylesheet" href='https://fonts.googleapis.com/css?family=Raleway:400,500,200italic,200,300,700')
+    link(rel="stylesheet" href="assets/css/styles.css")
+
+  body
+      
+    include partial-html/header.jade
+    
+    include partial-html/upcoming-movies.jade
+    
+    hr
+    
+    include partial-html/popular-movies.jade
+    
+    include partial-html/subscribe.jade
+    
+    include partial-html/footer.jade
+    
+    
+    
+    script(src="assets/js/function.js")
