@@ -1,3 +1,5 @@
+@import 'animation'
+
 /////////////////////VARIABLES///////////////
 $primary-backgroundcolor: #1d1d1d
 $accent-color: #ffc400
@@ -58,21 +60,40 @@ body
   //
   -webkit-tap-highlight-color: $selection-color
 
-
 //////////////HEADER////////////////
 #header
   width: 100%
   height: 750px
-  background: url(../img/movie.jpg)
-    repeat: no-repeat
-    size: cover
-    position: center center
   position: relative
 
-.head-wrapper
+  .left-control-prev
+    width: 70px
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0px
+    cursor: pointer
+
+  .right-control-next
+    width: 70px
+    height: 100%
+    position: absolute
+    top: 0
+    right: 0px
+    cursor: pointer
+
+  .button-nav
+    width: 50px
+    height: 50px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.header-wrapper
   margin: 0
-  width: 100%
   height: 100%
+  position: relative
 
 
   #head
@@ -80,6 +101,11 @@ body
     min-width: 90%
     height: 80px
     padding: 0 60px
+    position: fixed
+    z-index: 1000
+    opacity: 0.8
+    background: $primary-backgroundcolor
+
 
     #navMenu
       height: inherit
@@ -161,20 +187,34 @@ body
         &:hover
           cursor: pointer
 
+#banner1
+  z-index: 2
 
-  #bannerWrapperContent
-    min-width: 850px
+.banner-belt
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  display: none
+
+  &.active-slide
+    display: block
+
+  .bannerWrapperContent
+    max-width: 850px
+    margin: 0 0 0 -425px
     position: absolute
-    top: 50%
+    top: 28%
     left: 50%
-    transform: translate(-50%, -50%)
+    z-index: 1
     display: flex
 
 
-    #poster
+    .poster
       box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.157)
       border-radius: 10px
       position: relative
+      cursor: pointer
 
       .featured-image
         display: block
@@ -182,20 +222,26 @@ body
         height: 350px
         border-radius: 10px
 
-      .featured-image + .play-button
+      .play-button
         position: absolute
         top: 50%
         left: 50%
-        transform: translate(-50%, -50%)
-        width: 70px
-        height: 70px
+        transform: translate(-50%, -50%) scale(1)
+        transition: all 0.3s ease
+        width: 60px
+        height: 60px
 
-    #bannerDescription
+
+
+      &:hover .play-button
+        transform: translate(-50%, -50%) scale(2)
+
+    .bannerDescription
       margin-left: 60px
       display: flex
       align-items: center
 
-    #bannerWrapper
+    .bannerWrapper
 
 
       & > h2
@@ -271,6 +317,57 @@ body
   .column-item
     box-shadow: 0px 0px 8px 3px rgba(128, 128, 128, 0.227)
     border-radius: 5px
+    position: relative
+    overflow: hidden
+    cursor: pointer
+
+    .overlay-content
+      position: absolute
+      top: 0
+      right: 0px
+      left: 0px
+      height: 100%
+      padding: 0 10px
+      border-radius: 5px
+      background: fade-out($accent-color, 0.1)
+      -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+      transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+      .overlay-wrapper
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        text-align: center
+        font-weight: 400
+        color: $text-color
+
+        strong
+          font-weight: 700
+          font-size: 20px
+          text-transform: uppercase
+          display: inline-block
+          margin-bottom: 8px
+
+
+        strong + .movie-desc
+          font-size: 14px
+          line-height: 1.4
+          margin-bottom: 20px
+
+
+        .movie-info
+          font-size: 14px
+          font-weight: 700
+
+
+
+      // -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+      // transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+    &:hover .overlay-content
+      @extend .animation-target
+
+
 
   .movie-pic
     display: block
@@ -293,6 +390,7 @@ body
     h2
       color: $text-color
       margin: 0 0 35px 0
+      line-height: 1.5
 
     h2 + form
       display: flex
@@ -301,7 +399,7 @@ body
 
 #textSubscribe
   height: 40px
-  margin-bottom: 10px
+  margin-bottom: 15px
   background-color: rgba(44, 44, 44, 0.639)
   border-radius: 5px
   border: 0.5px solid rgb(189, 189, 189)
@@ -377,3 +475,27 @@ body
   .copyright
     color: #9f9f9f
     font-size: 14px
+
+
+
+#circle-wrapper
+  position: absolute
+  bottom: 20px
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 10
+  .fa
+    font-size: 10px
+    opacity: 0.5
+    margin-right: 5px
+    cursor: pointer
+
+    &.active-slide
+      opacity: 1
+
+.control-nav
+  opacity: 0
+  transition: all 1s ease
+
+  &:hover
+    opacity: 1

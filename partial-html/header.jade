@@ -1,5 +1,5 @@
 header#header.clearfix
-  .head-wrapper
+  .header-wrapper
     #head      
       navbar#navMenu
         p.logo GoogleWatch
@@ -15,18 +15,61 @@ header#header.clearfix
       form#searchForm
         input(type="text" placeholder="Type a movie or TV-Series..." class="search-text")    
         input(type="button" value="Search" class="search-button")
-    #bannerWrapperContent
-      #poster
-        img(src="assets/img/upcoming/suicide-squad.jpg" alt="title" class="featured-image")      
-        img(src="assets/img/play.png" alt="play-button" class="play-button")
-      #bannerDescription
-        #bannerWrapper
-          h2 SUICIDE SQUAD
-          .rating
-            i(class="fa fa-star")
-            i(class="fa fa-star")
-            i(class="fa fa-star")
-            i(class="fa fa-star")
-            i(class="fa fa-star inactive")
-          p.description Super heroes aren't the answer to every problem. Sometimes, extreme situations require extreme measures… or extreme individuals. The sort of individuals who call the infamous Belle Reve Prison home—super-villains. A group of super-villains who have license to take drastic action in the name of serving a mission? There's no way that can end badly.
-          p.info Action<span class="comma">, </span> Adventure<span class="comma">, </span>Comedy <span>|</span> August 05<span class="comma">, </span>2016 <span>|</span> 108min       
+    .banner-belt#banner1.active-slide(class="animated fadeIn" style="background: url(assets/img/movie1.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;")    
+      .bannerWrapperContent
+        .poster
+          img(src="assets/img/upcoming/suicide-squad.jpg" alt="title" class="featured-image")          
+          img(src="assets/img/play.png" alt="play-button" class="play-button")            
+        .bannerDescription
+          .bannerWrapper
+            h2 SUICIDE SQUAD
+            .rating
+              i(class="fa fa-star")
+              i(class="fa fa-star")  
+              i(class="fa fa-star")
+              i(class="fa fa-star")
+              i(class="fa fa-star inactive")
+            p.description Super heroes aren't the answer to every problem. Sometimes, extreme situations require extreme measures… or extreme individuals. The sort of individuals who call the infamous Belle Reve Prison home—super-villains. A group of super-villains who have license to take drastic action in the name of serving a mission? There's no way that can end badly.
+            p.info Action<span class="comma">, </span> Adventure<span class="comma">, </span>Comedy <span>|</span> August 05<span class="comma">, </span>2016 <span>|</span> 108min                         
+    .banner-belt#banner2(class="animated fadeIn" style="background: url(assets/img/movie2.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;")    
+      .bannerWrapperContent
+        .poster           
+          img(src="assets/img/upcoming/theconjuring.jpg" alt="title" class="featured-image")                      
+          img(src="assets/img/play.png" alt="play-button" class="play-button")  
+        .bannerDescription
+          .bannerWrapper
+            h2 THE CONJURING
+            .rating
+              i(class="fa fa-star")
+              i(class="fa fa-star")  
+              i(class="fa fa-star")
+              i(class="fa fa-star")
+              i(class="fa fa-star inactive")
+            p.description Super heroes aren't the answer to every problem. Sometimes, extreme situations require extreme measures… or extreme individuals. The sort of individuals who call the infamous Belle Reve Prison home—super-villains. A group of super-villains who have license to take drastic action in the name of serving a mission? There's no way that can end badly.
+            p.info Action<span class="comma">, </span> Adventure<span class="comma">, </span>Comedy <span>|</span> August 05<span class="comma">, </span>2016 <span>|</span> 108min                     
+    .banner-belt#banner3(class="animated fadeIn" style="background: url(assets/img/movie3.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;")    
+      .bannerWrapperContent
+        .poster
+          img(src="assets/img/upcoming/findingdory.jpg" alt="title" class="featured-image")             
+          img(src="assets/img/play.png" alt="play-button" class="play-button")  
+        .bannerDescription
+          .bannerWrapper
+            h2 FINDING DORY
+            .rating
+              i(class="fa fa-star")
+              i(class="fa fa-star")  
+              i(class="fa fa-star")
+              i(class="fa fa-star")
+              i(class="fa fa-star inactive")
+            p.description Super heroes aren't the answer to every problem. Sometimes, extreme situations require extreme measures… or extreme individuals. The sort of individuals who call the infamous Belle Reve Prison home—super-villains. A group of super-villains who have license to take drastic action in the name of serving a mission? There's no way that can end badly.
+            p.info Action<span class="comma">, </span> Adventure<span class="comma">, </span>Comedy <span>|</span> August 05<span class="comma">, </span>2016 <span>|</span> 108min           
+                        
+  
+  .left-control-prev.control-nav
+    img(src="assets/img/control/arrow_left.png" class="button-nav")
+  .right-control-next.control-nav
+    img(src="assets/img/control/arrow_right.png" class="button-nav")  
+  #circle-wrapper
+    i(class="fa fa-circle circle-control active-slide")   
+    i(class="fa fa-circle circle-control")   
+    i(class="fa fa-circle circle-control")   
