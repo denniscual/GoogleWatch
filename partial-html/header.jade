@@ -5,13 +5,17 @@ header#header.clearfix
         p.logo GoogleWatch
         ul
           li.menu-item
+            a(href="#header") Home
+          li.menu-item
             a(href="#") Genre
           li.menu-item
-            a(href="#") TV-Series
+            a(href="#upcomingMovies") Upcoming 
           li.menu-item
-            a(href="#") Subscribe
+            a(href="#popularMovies") Popular
           li.menu-item
-            a(href="#") Popular
+            a(href="#subscribe") Subscribe
+        a.menu(href="#")
+          i(class="fa fa-bars")
       form#searchForm
         input(type="text" placeholder="Type a movie or TV-Series..." class="search-text")    
         input(type="button" value="Search" class="search-button")

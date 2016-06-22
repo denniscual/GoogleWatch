@@ -14,22 +14,24 @@
   <body>
     <header id="header" class="clearfix">
       <div class="header-wrapper">
-        <div id="head">     
+        <div id="head">
           <navbar id="navMenu">
             <p class="logo">GoogleWatch</p>
             <ul>
+              <li class="menu-item"><a href="#header">Home</a></li>
               <li class="menu-item"><a href="#">Genre</a></li>
-              <li class="menu-item"><a href="#">TV-Series</a></li>
-              <li class="menu-item"><a href="#">Subscribe</a></li>
-              <li class="menu-item"><a href="#">Popular</a></li>
+              <li class="menu-item"><a href="#upcomingMovies">Upcoming </a></li>
+              <li class="menu-item"><a href="#popularMovies">Popular</a></li>
+              <li class="menu-item"><a href="#subscribe">Subscribe</a></li>
             </ul>
           </navbar>
+          <a href="#" class="menu"><i class="fa fa-bars"></i></a>
           <form id="searchForm">
             <input type="text" placeholder="Type a movie or TV-Series..." class="search-text">
             <input type="button" value="Search" class="search-button">
           </form>
         </div>
-        <div id="banner1" style="background: url(assets/img/movie1.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;" class="banner-belt active-slide animated fadeIn">   
+        <div id="banner1" style="background: url(assets/img/movie1.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;" class="banner-belt active-slide animated fadeIn">
           <div class="bannerWrapperContent">
             <div class="poster"><img src="assets/img/upcoming/suicide-squad.jpg" alt="title" class="featured-image"><img src="assets/img/play.png" alt="play-button" class="play-button"></div>
             <div class="bannerDescription">
@@ -42,7 +44,7 @@
             </div>
           </div>
         </div>
-        <div id="banner2" style="background: url(assets/img/movie2.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;" class="banner-belt animated fadeIn">   
+        <div id="banner2" style="background: url(assets/img/movie2.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;" class="banner-belt animated fadeIn">
           <div class="bannerWrapperContent">
             <div class="poster">          <img src="assets/img/upcoming/theconjuring.jpg" alt="title" class="featured-image"><img src="assets/img/play.png" alt="play-button" class="play-button"></div>
             <div class="bannerDescription">
@@ -55,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div id="banner3" style="background: url(assets/img/movie3.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;" class="banner-belt animated fadeIn">   
+        <div id="banner3" style="background: url(assets/img/movie3.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;" class="banner-belt animated fadeIn">
           <div class="bannerWrapperContent">
             <div class="poster"><img src="assets/img/upcoming/findingdory.jpg" alt="title" class="featured-image"><img src="assets/img/play.png" alt="play-button" class="play-button"></div>
             <div class="bannerDescription">
@@ -73,7 +75,7 @@
       <div class="right-control-next control-nav"><img src="assets/img/control/arrow_right.png" class="button-nav"></div>
       <div id="circle-wrapper"><i class="fa fa-circle circle-control active-slide">  </i><i class="fa fa-circle circle-control">  </i><i class="fa fa-circle circle-control">  </i></div>
     </header>
-    <section id="upcomingMovies">
+    <section id="upcomingMovies" class="clearfix">
       <div class="wrapper">
         <div class="head-movie clearfix">
           <h2>Upcoming Movies</h2><a href="#">View all movie</a>
@@ -104,6 +106,14 @@
             </div>
           </div>
           <div class="column-item"><img src="assets/img/upcoming/suicide-squad.jpg" alt="suicide squad" class="movie-pic">
+            <div class="overlay-content">
+              <div class="overlay-wrapper"><strong>Warcraft</strong>
+                <p class="movie-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloo.</p>
+                <p class="movie-info">Action<span class="comma">, </span> Adventure<span class="comma">, </span>Comedy <span>|</span> August 05<span class="comma">, </span>2016 <span>|</span> 108min                     </p>
+              </div>
+            </div>
+          </div>
+          <div class="column-item"><img src="assets/img/upcoming/bfg.jpg" alt="the bfg movie" class="movie-pic">
             <div class="overlay-content">
               <div class="overlay-wrapper"><strong>Warcraft</strong>
                 <p class="movie-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloo.</p>
@@ -169,6 +179,14 @@
               </div>
             </div>
           </div>
+          <div class="column-item"><img src="assets/img/popular/deadpool.jpg" alt="deadpool" class="movie-pic">
+            <div class="overlay-content">
+              <div class="overlay-wrapper"><strong>Warcraft</strong>
+                <p class="movie-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloo.</p>
+                <p class="movie-info">Action<span class="comma">, </span> Adventure<span class="comma">, </span>Comedy <span>|</span> August 05<span class="comma">, </span>2016 <span>|</span> 108min                     </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -185,16 +203,18 @@
     </section>
     <section id="footer">
       <div class="wrapper">
-        <p class="logo">GoogleWatch</p>
-        <navbar id="navMenu" class="clearfix">
-          <ul>
-            <li class="menu-item"><a href="#">About</a></li>
-            <li class="menu-item"><a href="#">Genre</a></li>
-            <li class="menu-item"><a href="#">Terms of Services</a></li>
-            <li class="menu-item"><a href="#">Privacy Settings</a></li>
-          </ul>
-        </navbar>
-        <p class="copyright">Copyright 2016, GoogleWatch, All Right Reserve</p>
+        <div id="footer-content">
+          <p class="logo">GoogleWatch</p>
+          <navbar id="navMenuFooter" class="clearfix">
+            <ul>
+              <li class="menu-item"><a href="#">About</a></li>
+              <li class="menu-item"><a href="#">Genre</a></li>
+              <li class="menu-item"><a href="#">Terms of Services</a></li>
+              <li class="menu-item"><a href="#">Privacy Settings</a></li>
+            </ul>
+          </navbar>
+          <p class="copyright">Copyright 2016, GoogleWatch, All Right Reserve</p>
+        </div>
       </div>
     </section>
     <script src="assets/js/functions.js"></script>
